@@ -1,6 +1,6 @@
 class Solution:
     # slower 
-    def isAnagram_1(self, s: str, t: str) -> bool:
+    def isAnagram_2(self, s: str, t: str) -> bool:
         string_profile = {}
         len_s = len(s)
         if len_s != len(t):
@@ -13,7 +13,7 @@ class Solution:
             return not any(string_profile.values())
     
     # faster 
-    def isAnagram(self, s: str, t: str) -> bool:
+    def isAnagram_1(self, s: str, t: str) -> bool:
         string_profile = {}
         
         if len(s) != len(t):
@@ -24,3 +24,8 @@ class Solution:
                 string_profile[ord(t)] = string_profile.get(ord(t), 0) - 1
             
             return not any(string_profile.values())
+    
+    # slowest, but damn python XD
+    def isAnagram(self, s: str, t: str) -> bool:
+
+        return sorted(s) == sorted(t)
