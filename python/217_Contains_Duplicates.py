@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def containsDuplicate_1(self, nums: List[int]) -> bool:
         for num in nums:
