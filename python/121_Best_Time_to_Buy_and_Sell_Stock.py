@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     # Time Limit Exceeded
     def maxProfit_1(self, prices: List[int]) -> int:
